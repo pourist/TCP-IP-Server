@@ -1,5 +1,5 @@
-#ifndef TCPSERVERCONTROLLER_H
-#define TCPSERVERCONTROLLER_H
+#ifndef TCPSERVERCONTROLLER_HPP
+#define TCPSERVERCONTROLLER_HPP
 
 #include <string>
 #include <stdint.h>
