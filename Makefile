@@ -52,7 +52,8 @@ endif
 MAIN_SRC     := main.cpp
 LIB_SOURCES  := core/TcpServerController.cpp db/TcpClientDbManager.cpp \
                 services/TcpClientServiceManager.cpp services/TcpNewConnectionAcceptor.cpp \
-                utils/network_utils.cpp
+                utils/network_utils.cpp \
+				config_temp/temp_pars_config.cpp
 
 # Objects (mirrored under build/obj/)
 APP_OBJECT   := $(OBJ_DIR)/$(MAIN_SRC:.cpp=.o)
@@ -68,7 +69,7 @@ TEST_SOURCES := \
 	test/db/test_TcpClientDbManager.cpp \
 	test/services/test_TcpClientServiceManager.cpp \
 	test/services/test_TcpNewConnectionAcceptor.cpp \
-	test/test.cpp
+	test/test.cpp 
 
 TEST_BINARIES := $(patsubst test/%.cpp,$(BIN_DIR)/tests/%,$(TEST_SOURCES))
 
