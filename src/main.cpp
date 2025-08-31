@@ -1,15 +1,14 @@
-#include "TcpServerController.hpp"
+#include "server_app.hpp"
 #include "config_temp/temp_pars_config.hpp"
 #include <iostream>
 #include <stdexcept>
 
-int main(int argc, char **argv){
+int main(int argc, char **argv)
+{
     try{
         RuntimeConfig cfg;
         parseTempConfig(argc, argv, cfg);
-
-        
-
+        runServerApp(cfg);
     }
     catch (std::exception &e){
         std::cerr << "Error:\t" << e.what() << std::endl;
