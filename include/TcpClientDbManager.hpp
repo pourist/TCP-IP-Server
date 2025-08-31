@@ -6,16 +6,20 @@
 class TcpClient;
 class TcpServerController;
 
-class TcpClientDBManager {
+class TcpClientDbManager {
 
     private:
-        std::list<TcpClient*>tcp_client_db;
+        std::list<TcpClient*> tcp_client_db;
     
-    public:
-        TcpServerController *tcp_ctrlr;
+        TcpClientDbManager();
+        TcpClientDbManager(const TcpClientDbManager& src);
+        TcpClientDbManager &operator=(const TcpClientDbManager& src);
 
-        TcpClientDBManager(TcpServerController *);
-        ~TcpClientDBManager();
+    public:
+        TcpServerController &tcp_ctrlr;
+
+        TcpClientDbManager(TcpServerController &controller);
+        ~TcpClientDbManager();
 };
 
 #endif

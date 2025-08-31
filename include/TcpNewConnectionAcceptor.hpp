@@ -5,11 +5,14 @@ class TcpServerController;
 
 class TcpNewConnectionAcceptor {
     private:
-        
-    public:
-        TcpServerController *tcp_ctrlr;
+        TcpNewConnectionAcceptor();
+        TcpNewConnectionAcceptor(const TcpNewConnectionAcceptor& src);
+        TcpNewConnectionAcceptor &operator=(const TcpNewConnectionAcceptor& src);
 
-        TcpNewConnectionAcceptor(TcpServerController *);
+    public:
+        TcpServerController &tcp_ctrlr;
+
+        TcpNewConnectionAcceptor(TcpServerController &controller);
         ~TcpNewConnectionAcceptor();
 };
 

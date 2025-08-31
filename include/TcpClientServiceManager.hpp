@@ -5,11 +5,14 @@ class TcpServerController;
 
 class TcpClientServiceManager {
     private:
-        
-    public:
-        TcpServerController *tcp_ctrlr;
+        TcpClientServiceManager();
+        TcpClientServiceManager(const TcpClientServiceManager& src);
+        TcpClientServiceManager& operator=(const TcpClientServiceManager& src);
 
-        TcpClientServiceManager(TcpServerController *);
+    public:
+        TcpServerController &tcp_ctrlr;
+
+        TcpClientServiceManager(TcpServerController &controller);
         ~TcpClientServiceManager();
 };
 

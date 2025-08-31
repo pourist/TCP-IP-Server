@@ -15,6 +15,10 @@ private:
     TcpClientDbManager          *tcp_client_db_mgr;
     TcpClientServiceManager     *tcp_client_svc_mgr;
     
+    TcpServerController();
+    TcpServerController(const TcpServerController&);
+    TcpServerController& operator=(const TcpServerController&); // not implemented
+
 public:
     uint32_t   ip_addr;
     uint16_t   port_no;
@@ -22,6 +26,8 @@ public:
 
     TcpServerController(uint32_t ip_addr, uint16_t port_no, std::string name);
     ~TcpServerController();
+
+
     void    start();
     void    stop();
 };
