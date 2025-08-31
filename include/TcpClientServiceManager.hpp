@@ -14,6 +14,8 @@ class TcpClientServiceManager {
 
         TcpClientServiceManager(TcpServerController &controller);
         ~TcpClientServiceManager();
+
+        void    startTcpClientServiceManagerThread();
 };
 
 #endif

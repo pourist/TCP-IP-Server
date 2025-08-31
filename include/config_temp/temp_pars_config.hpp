@@ -5,7 +5,7 @@
 #include <string>
 
 struct RuntimeConfig {
-    uint32_t    ip_addr;   // IPv4, network byte order
+    std::string    ip_addr_str;   // IPv4, network byte order
     uint16_t    port_no;   // host byte order
     std::string name;
 };

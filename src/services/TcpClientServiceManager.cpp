@@ -7,3 +7,5 @@ TcpClientServiceManager::TcpClientServiceManager(TcpServerController &controller
 
 
 TcpClientServiceManager::~TcpClientServiceManager(){}
+
+void    TcpClientServiceManager::startTcpClientServiceManagerThread(){}

@@ -11,8 +11,10 @@ void    parseTempConfig(int argc, char** argv, RuntimeConfig& cfg)
     if (argc != 4)
             throw std::runtime_error("Usage: <program> <ip> <port> <name>");
 
-    if (!network_convert_ip_p_to_n(argv[1], &cfg.ip_addr))
-        throw std::runtime_error(std::string("Invalid IP: ") + argv[1]);
+    cfg.ip_addr_str = argv[1];
+    if (cfg.ip_addr_str.empty()) {
+        throw std::runtime_error("Invalid name: empty");
+    }
 
     errno = 0;
     char* endptr = 0;

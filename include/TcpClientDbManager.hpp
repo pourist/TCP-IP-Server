@@ -20,6 +20,8 @@ class TcpClientDbManager {
 
         TcpClientDbManager(TcpServerController &controller);
         ~TcpClientDbManager();
+
+        void    startTcpClientDbManagerThread();
 };
 
 #endif

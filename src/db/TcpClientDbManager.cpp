@@ -5,3 +5,5 @@ TcpClientDbManager::TcpClientDbManager(TcpServerController &controller)
 
 
 TcpClientDbManager::~TcpClientDbManager() {}
+
+void    TcpClientDbManager::startTcpClientDbManagerThread(){}

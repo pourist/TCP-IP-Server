@@ -6,3 +6,5 @@ TcpNewConnectionAcceptor::TcpNewConnectionAcceptor(TcpServerController &controll
 }
 
 TcpNewConnectionAcceptor::~TcpNewConnectionAcceptor() {}
+
+void    TcpNewConnectionAcceptor::startTcpNewConnectionAcceptorThread(){}
