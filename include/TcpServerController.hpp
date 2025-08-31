@@ -20,16 +20,19 @@ private:
     TcpServerController& operator=(const TcpServerController&); // not implemented
 
 public:
-    uint32_t   ip_addr;
-    uint16_t   port_no;
+    std::string ip_addr_string;
+    uint32_t    ip_addr;
+    uint16_t    port_no;
     std::string name;
 
-    TcpServerController(uint32_t ip_addr, uint16_t port_no, std::string name);
+    TcpServerController(std::string ip_addr_string, uint16_t port_no, std::string name);
     ~TcpServerController();
 
 
     void    start();
     void    stop();
+
+    void    printServerIsRunning();
 };
 
 #endif
