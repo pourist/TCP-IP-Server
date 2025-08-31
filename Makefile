@@ -52,7 +52,7 @@ endif
 MAIN_SRC     := main.cpp
 LIB_SOURCES  := core/TcpServerController.cpp db/TcpClientDbManager.cpp \
                 services/TcpClientServiceManager.cpp services/TcpNewConnectionAcceptor.cpp \
-                utils/network_utils.cpp \
+                utils/network_utils.cpp core/server_app.cpp \
 				config_temp/temp_pars_config.cpp
 
 # Objects (mirrored under build/obj/)
